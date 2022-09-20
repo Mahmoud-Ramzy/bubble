@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbles</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Start Landing Page -->
+    <div class="landing-page">
+      <!-- Start navbar -->
+      <nav>
+        <h2 class="logo">
+          Mahmoud <br />
+          Ramzy
+        </h2>
+        <button type="button">Sign Up</button>
+      </nav>
+      <!-- End navbar -->
+      <!-- Start main content section -->
+      <div class="content">
+        <small>Welcome to our</small>
+        <h1>
+          Ramzy's <br />
+          Creative<br class="narrow" />
+          Studio
+        </h1>
+        <button type="button">Take a tour</button>
+      </div>
+      <!-- End main content section -->
+      <!-- Start Side navbar -->
+      <div class="menu-closed">
+        <img
+          src="./Images/menu.png"
+          alt="menu "
+          class="menu-closed-icon"
+          onclick="showNavbar()"
+        />
+      </div>
+
+      <div class="side-navbar">
+        <img
+          src="./Images/menu.png"
+          alt="menu "
+          class="menu"
+          onclick="hideNavbar()"
+        />
+
+        <div class="social-link">
+          <a href="https://www.facebook.com/Mahmoud.Mody656/" target="_blank"
+            ><img src="./Images/fb.png" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/ma.ramzy74/" target="_blank"
+            ><img src="./Images/ig.png" alt="instagram"
+          /></a>
+          <a href="https://twitter.com/Mah_Ramzy" target="_blank"
+            ><img src="./Images/tw.png" alt="twitter"
+          /></a>
+        </div>
+
+        <div class="useful-link">
+          <img src="./Images/share.png" alt="share" />
+          <img src="./Images/info.png" alt="info" />
+        </div>
+      </div>
+      <!-- End Side navbar -->
+      <!-- Start bubbles to animated -->
+      <div class="bubbles">
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+        <img src="./Images/bubble.png" alt="bubble" />
+      </div>
+      <!-- End bubbles to animated -->
+    </div>
+    <!-- End Landing Page -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

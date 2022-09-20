@@ -1,0 +1,251 @@
+/*Start Global components*/
+:root{
+    --text-color: #fbfcfd;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+/*End Global components*/
+
+/*Start Landing Page*/
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Images/background.png);
+    background-position:center ;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+/* Start navbar */
+.logo{
+    width: 130px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+.logo::before{
+    content: "";
+    background:url(./Images/bubble.png);
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 76px;
+    height: 74px;
+    background-position: center;
+    background-size: cover;
+    opacity: 30%;
+}
+nav{
+    width: 80%;
+    height:15% ;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    color: var(--text-color);
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+/* End navbar */
+/* Start main content */
+.content{
+    color: var(--text-color);
+    position: absolute;
+    top:50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+h1{
+    font-size: 80px;
+    margin:10px 0 30px ;
+    line-height: 80px;
+}
+/* End main content */
+
+/* Start side navbar */
+
+.side-navbar, .menu-closed{
+    width: 100px;
+    height: 100vh;
+    background: linear-gradient(#00545d, #000729);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.7s, opacity 0.7s;
+}
+.menu, .menu-closed-icon{
+    display: block;
+    width: 35px;
+    margin: 40px auto 0 ;
+    cursor: pointer;
+}
+.social-link img, .useful-link img{
+    width: 35px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.social-link, .useful-link{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.useful-link{
+    top: unset;
+    transform: translateY(0);
+    bottom: 30px;
+}
+/* End side navbar */
+/* Start bubbles to animated */
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+.bubbles{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+}
+@keyframes bubble {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    width: 25px;
+    animation: bubble 4.5s ease-in-out 0.5s infinite;
+}
+.bubbles img:nth-child(2){
+    width: 30px;
+    animation: bubble 5s linear 1s infinite;
+}
+.bubbles img:nth-child(3){
+    width: 50px;
+    animation: bubble 6s linear 4.6s infinite;
+}
+.bubbles img:nth-child(4){
+    width: 40px;
+    animation: bubble 6s ease-out 2s infinite;
+}
+.bubbles img:nth-child(5){
+    width: 48px;
+    animation: bubble 6s linear 4s infinite;
+}
+.bubbles img:nth-child(6){
+    width: 35px;
+    animation: bubble 6s ease-in 3.2s infinite;
+}
+.bubbles img:nth-child(7){
+    width: 55px;
+    animation: bubble 7s linear 6s infinite;
+}
+/* End bubbles to animated */
+.narrow{display: none;}
+/*End Landing Page*/
+/* Start resposive */
+@media (max-width:1050px) {
+    .bubbles{
+        width: 85%;
+    }
+    nav button{
+        margin-right: 10%;
+    }
+}
+@media (max-width:767px) {
+    h1{
+        font-size: 3.5rem;
+    }
+    .side-navbar, .menu-closed{
+        width: 60px;
+    }
+}
+@media (max-width:520px) {
+    .narrow{display: block;}
+}
+@media (max-width:350px) {
+    .logo{
+        font-size: 20px;
+    }
+    .logo::before{
+        width: 46px;
+        height: 44px;
+        left: -5px;
+    }
+    .bubbles{
+        width: 75%;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    nav{
+        width: 77%;
+    }
+    nav button{
+        padding: 10px 10px;
+    }
+
+}
+/* End resposive */
+/*Start Bubble at move*/
+span{
+    position: absolute;
+    /*height: 50px;
+    width: 50px;*/
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+
+    background: url(./Images/bubble.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 70%;
+    animation: createBubble 5s linear infinite;
+}
+
+@keyframes createBubble {
+    from{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+    to{
+        transform: translate(-50%,-1000%);
+        opacity: 0;
+    }
+}
+/*End Bubble at move*/
