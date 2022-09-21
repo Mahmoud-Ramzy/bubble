@@ -19,6 +19,24 @@ addEventListener("mousemove",function(event){
         }
         times++;
 });
+addEventListener("click",function(event){
+
+            let body= document.body;
+            let bubble = document.createElement("span")
+            let x=event.clientX;
+            let y=event.clientY;
+            bubble.style.left= `${x}px`;
+            bubble.style.top= `${y}px`;
+            let size= (Math.random() * 70 )+20;
+            bubble.style.width=`${size}px`
+            bubble.style.height=`${size}px`
+            console.log(event);
+            body.appendChild(bubble);
+            
+            setTimeout(()=>{
+                bubble.remove();
+            },3000 );
+});
 
 
 function bubbleGenerator(){
@@ -44,4 +62,13 @@ function hideNavbar(){
     },500)
     
     
+}
+
+function Copy() 
+{
+    Copied = "https://mahmoud-ramzy.github.io/bubble/";
+    Copied.execCommand("Copy");
+}
+function Info(){
+
 }
