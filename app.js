@@ -32,7 +32,8 @@ addEventListener("click",function(event){
             bubble.style.height=`${size}px`
             console.log(event);
             body.appendChild(bubble);
-            
+            var audio=document.getElementById("sound");
+            audio.play();
             setTimeout(()=>{
                 bubble.remove();
             },3000 );
